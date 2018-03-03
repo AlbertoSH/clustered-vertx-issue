@@ -1,0 +1,12 @@
+FROM openjdk:8-jre-alpine
+
+COPY build/libs/dockerized-clustered-vertx-1.0-SNAPSHOT-fat.jar /app.jar
+
+CMD [ \
+    "java", \
+    "-jar", \
+    "/app.jar", \
+    "run", \
+    "com.github.albertosh.dockerizedclusteredvertx.Verticle1", \
+    "--cluster" \
+]

@@ -1,0 +1,7 @@
+gradle clean shadowJar
+
+docker build -t verticle1:v1 -f Verticle1Dockerfile .
+
+docker network create vertx
+
+docker run --rm --name verticle1 -p 9000:9000 --network=vertx verticle1:v1

@@ -1,0 +1,5 @@
+gradle clean shadowJar
+
+java \
+      -cp build/libs/dockerized-clustered-vertx-1.0-SNAPSHOT-fat.jar \
+      com.github.albertosh.dockerizedclusteredvertx.Verticle2LauncherKt

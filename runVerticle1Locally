@@ -1,3 +1,7 @@
 gradle clean shadowJar
 
-java -jar build/libs/dockerized-clustered-vertx-1.0-SNAPSHOT-fat.jar run com.github.albertosh.dockerizedclusteredvertx.Verticle1 --cluster
+java \
+     -jar build/libs/dockerized-clustered-vertx-1.0-SNAPSHOT-fat.jar \
+     run \
+     com.github.albertosh.dockerizedclusteredvertx.Verticle1 \
+     --cluster

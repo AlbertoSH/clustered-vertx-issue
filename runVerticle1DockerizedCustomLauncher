@@ -1,0 +1,11 @@
+gradle clean shadowJar
+
+docker build -t verticle1-custom-launcher:v1 -f Verticle1CustomLauncherDockerfile .
+
+docker network create vertx
+
+docker run --rm \
+     --name verticle1-custom-launcher \
+     -p 9000:9000 \
+     --network=vertx \
+     verticle1-custom-launcher:v1
